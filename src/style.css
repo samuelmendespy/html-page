@@ -1,0 +1,129 @@
+:root {
+  --firstColor: #008f3bff;
+  --secondColor: #0f2652;
+  --altTextColor: #626262;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-right: 70px solid transparent;
+  border-top: 70px solid var(--firstColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  width: 300px;
+  position: relative;
+  z-index: 1;
+  background: rgba(240, 240, 255, 0.666);
+  box-shadow: 5px 4px 20px 8px rgba(0, 0, 0, 0.222);
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.login-box {
+  max-width: 250px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: var(--secondColor);
+  font-stretch: expanded;
+  letter-spacing: 2px;
+  font-size: 3.5rem;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 14px;
+  color: var(--altTextColor);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  margin-top: 20px;
+  color: var(--secondColor);
+}
+
+input {
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  border: 1px solid var(--firstColor);
+  color: var(--altTextColor);
+  font-size: 13px;
+}
+
+input::placeholder {
+  color: var(--altTextColor);
+}
+
+input:focus {
+  outline: none;
+}
+
+.options {
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: white;
+}
+
+.options a {
+  color: #444;
+  margin-left: auto;
+  text-align: center;
+}
+
+button {
+  background: var(--firstColor);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background: #70cd95;
+  color: var(--secondColor);
+  outline: 1px solid #fff;
+}
